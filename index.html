@@ -131,7 +131,7 @@
         </p>
 
         <fieldset>
-            <legend>Contáctanos</legend>
+            <!-- <legend>Contáctanos</legend> 
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name"> <br><br>
             <label for="lastname">Apellido:</label>
@@ -143,7 +143,19 @@
             <label for="comentario">Consulta: <textarea name="comentario" id="comentario" rows="10"
                     cols="40">Escribe tu consulta...</textarea></label>
             <input type="submit" value="Enviar">
-            </div>
+            </div> -->
+            <form action="https://formspree.io/f/xdkoklpv" method="POST">
+                <label>
+                    Your email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+            </form>
         </fieldset>
     </footer>
 
