@@ -1,113 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeamFight Tactics</title>
+    <title>Teamfight Tactics | Comunidad</title>
     <link rel="icon" href="imagenes tft/logo sin fondo.ico">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="#inicio" class="brand" aria-label="Ir al inicio">
+                <img src="imagenes tft/logo sin fondo.png" alt="Logo Teamfight Tactics" width="54" height="54">
+                <span>TEAMFIGHT TACTICS</span>
+            </a>
 
-    <header>
-        <nav>
-            <img src="imagenes tft/logo sin fondo.png" alt="TeamFight Tactics Logo" width="100">
-            <ul>
-                <li><a href="#" onclick="return false">Noticias</a></li>
-                <li><a href="#" onclick="return false">Productos</a></li>
-                <li><a href="#" onclick="return false">Reseñas</a></li>
-                <li><a href="#" onclick="return false">Contacto</a></li>
-            </ul>
-        </nav>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema">
+                🌙
+            </button>
+        </div>
     </header>
 
-    <main class="container"> <!-- Se añade la clase container -->
-        <!-- Sección de Introducción -->
-        <section class="introduccion">
-            <h1>TEAMFIGHT TACTICS</h1>
-            <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/" class="btn">JUEGA GRATIS</a>
-            <p>JUEGA GRATIS EN DISPOSITIVOS MÓVILES O EN COMPUTADORA</p>
-            <div class="app-links">
-                <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/">
-                    <button>Descárgalo en el App Store</button>
-                </a>
-                <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/">
-                    <button>Disponible en Google Play</button>
-                </a>
+    <main id="inicio">
+        <section class="hero container">
+            <div class="hero-content">
+                <p class="eyebrow">Estrategia, caos y magia</p>
+                <h1>La Convergencia te está esperando</h1>
+                <p class="hero-text">Recluta campeones, crea composiciones imparables y escala hasta la cima en cada
+                    partida. Juega en PC o móvil y compite con tus amigos.</p>
+                <div class="hero-actions">
+                    <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/" class="btn btn-primary">JUEGA
+                        GRATIS</a>
+                    <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/" class="btn btn-secondary">VER
+                        DESCARGAS</a>
+                </div>
+                <div class="store-links" aria-label="Tiendas de aplicaciones">
+                    <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/">App Store</a>
+                    <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/">Google Play</a>
+                </div>
+            </div>
+            <div class="hero-card" id="noticias">
+                <h2>Noticias rápidas</h2>
+                <p><strong>Nuevo set:</strong> cambios de rasgos y campeones cada temporada.</p>
+                <p><strong>Meta en vivo:</strong> descubre composiciones fuertes cada semana.</p>
+                <p><strong>Eventos:</strong> recompensas exclusivas por tiempo limitado.</p>
             </div>
         </section>
 
-        <!-- Sección de Productos -->
-        <section class="productos">
-            <article>
-                <img src="imagenes tft/1.png" alt="Imagen sobre la convergencia" width="200">
-                <h2>LUCHA POR LA CONVERGENCIA</h2>
-                <p>Recluta, despliega y domina con una alineación rotativa de campeones de League of Legends en una
-                    batalla por rondas donde el objetivo es la supremacía. Supera a tus oponentes y adáptate conforme
-                    avanzas. La estrategia depende de ti.</p>
-                <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/" class="btn">JUEGA GRATIS</a>
+        <section class="container tools">
+            <div class="section-heading">
+                <h2>Explora contenido</h2>
+                <p>Busca rápidamente una sección por palabra clave.</p>
+            </div>
+            <label for="searchInput" class="sr-only">Buscar en tarjetas</label>
+            <input id="searchInput" type="search" placeholder="Escribe: convergencia, descarga, estilo..."
+                aria-label="Buscar contenido">
+        </section>
+
+        <section id="productos" class="container cards-grid">
+            <article class="card searchable-card">
+                <img src="imagenes tft/1.png" alt="Imagen sobre la convergencia">
+                <h3>LUCHA POR LA CONVERGENCIA</h3>
+                <p>Domina rondas estratégicas con una alineación rotativa de campeones y adapta tu juego para superar
+                    a tus rivales.</p>
+                <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/" class="inline-link">Saber más →</a>
             </article>
 
-            <article>
-                <h2>DESCARGA Y JUEGA</h2>
-                <p>El soporte multiplataforma te permite jugar con tus amigos (y aplastar a tus enemigos) en PC, Mac y
-                    dispositivos móviles.</p>
-                <img src="imagenes tft/2.png" alt="Compatibilidad de dispositivos" width="200">
+            <article class="card searchable-card">
+                <img src="imagenes tft/2.png" alt="Compatibilidad de dispositivos">
+                <h3>DESCARGA Y JUEGA</h3>
+                <p>Disfruta de soporte multiplataforma en PC, Mac y móviles para jugar donde quieras.</p>
+                <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/" class="inline-link">Ver plataformas
+                    →</a>
             </article>
 
-            <article>
-                <img src="imagenes tft/3.png" alt="Estilo personal en el juego" width="200">
-                <h2>DEMUESTRA TU ESTILO</h2>
-                <p>Exprésate con tu Minileyenda que baila, hace gestos y hasta alardea.</p>
+            <article class="card searchable-card">
+                <img src="imagenes tft/3.png" alt="Estilo personal en el juego">
+                <h3>DEMUESTRA TU ESTILO</h3>
+                <p>Exprésate con Minileyendas, gestos y cosméticos que hacen única cada victoria.</p>
+                <a href="https://teamfighttactics.leagueoflegends.com/es-es/download/" class="inline-link">Personalización →</a>
             </article>
         </section>
 
-        <!-- Sección de Reseñas -->
-        <section class="reseñas">
-            <h4>TEAMFIGHT TACTICS</h4>
+        <section id="resenas" class="container spotlight searchable-card">
             <h2>MÁGICO Y CAÓTICO</h2>
-            <p>¡Ajusten esas varitas y desempolven sus grimorios, porque la magia dejará huella en la Convergencia! El
-                hechizo para conseguir la victoria se hace con un conjuro de curiosidad y MUCHA magia, ¿serás capaz de
-                lograrlo? ¡Apresúrate! El Magitorium te espera.</p>
-            <button>Más Información</button>
+            <p>La Convergencia se transforma con cada set, ofreciendo nuevas mecánicas, campeones y estrategias que
+                convierten cada partida en una experiencia diferente.</p>
+            <button class="btn btn-primary" id="moreInfoBtn" type="button">Más información</button>
+            <p id="moreInfoText" class="hidden">Consejo: construye una economía sólida al inicio y adapta tu composición
+                según los objetos que recibas.</p>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-logo">
-            <img src="imagenes tft/logo sin fondo.png" alt="TeamFight Tactics Logo" width="100">
-            <h1>TEAMFIGHT TACTICS</h1>
-        </div>
-        <p>&copy; 2024 Suarez Alan Inc. Todos los derechos reservados.</p>
-        <ul>
-            <li><a href="#">AVISO DE PRIVACIDAD</a></li>
-            <li><a href="#">TÉRMINOS DE SERVICIO</a></li>
-            <li><a href="#">PREFERENCIAS DE COOKIES</a></li>
-        </ul>
+    <footer id="contacto" class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <img src="imagenes tft/logo sin fondo.png" alt="Logo Teamfight Tactics" width="70">
+                    <h2>TEAMFIGHT TACTICS</h2>
+                </div>
+                <p>© 2026 Suarez Alan Inc. Todos los derechos reservados.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Aviso de privacidad</a></li>
+                    <li><a href="#">Términos de servicio</a></li>
+                    <li><a href="#">Preferencias de cookies</a></li>
+                </ul>
+            </div>
 
-        <div class="ratings">
-            <img src="imagenes tft/4.png" alt="Clasificación del contenido" width="100">
-            <p>Sangre</p>
-            <p>Violencia de fantasía</p>
-            <p>Temas insinuantes moderados</p>
-            <p>Uso de alcohol y tabaco</p>
-            <p>Interacciones en línea no clasificadas por la ESRB</p>
-        </div>
+            <div class="ratings">
+                <img src="imagenes tft/4.png" alt="Clasificación del contenido" width="90">
+                <p>Sangre</p>
+                <p>Violencia de fantasía</p>
+                <p>Temas insinuantes moderados</p>
+                <p>Uso de alcohol y tabaco</p>
+            </div>
 
-        <!-- Formulario de Contacto -->
-        <form action="https://formspree.io/f/xdkoklpv" method="POST" class="contact-form">
-            <label for="email">Your email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Your message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+            <form action="https://formspree.io/f/xdkoklpv" method="POST" class="contact-form" id="contactForm">
+                <h3>Contáctanos</h3>
+                <label for="email">Tu correo</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+                <label for="message">Tu mensaje</label>
+                <textarea id="message" name="message" rows="4" placeholder="Cuéntanos tu idea..." required></textarea>
+
+                <p id="formStatus" role="status" aria-live="polite"></p>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
